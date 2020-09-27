@@ -10,6 +10,7 @@ const push=x=>{
         console.log(x)
     }else{
         console.log("stack is full")
+        return -1;
     }
 }
 const pop=()=>{
