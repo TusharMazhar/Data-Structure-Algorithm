@@ -3,7 +3,7 @@ const Length=queue.length;
 let front=0;
 let rear=-1;
 let totalItem=0;
-var frontItem
+
 
 const isFull=()=>{
     if(totalItem===Length){
