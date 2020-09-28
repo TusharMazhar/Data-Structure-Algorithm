@@ -23,10 +23,33 @@ class singlyLinkedList{
         this.length++;
         return this
     }
+    pop=()=>{
+        if(!this.head) return undefined;
+        let current=this.head;
+        let newTail=current;
+        if(current.next){
+              newTail=current;
+              current=current.next;
+        }
+        this.tail=newTail;
+        this.tail.next=null;
+        this.length--;
+        if(this.length===0){
+            this.head=null;
+            this.tail=null;
+        }
+        return current
+
+    }
 
 }
 let list= new singlyLinkedList();
-console.log(list.push("hello"))
-console.log(list.push("Tushar"))
-console.log(list.push("How are you"))
+list.push("hello")
+list.push("Tushar")
+list.push("How are you")
 
+console.log(list.pop())
+console.log(list.pop())
+console.log(list.pop())
+
+console.log(list.pop())
